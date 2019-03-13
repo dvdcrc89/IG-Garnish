@@ -1,0 +1,155 @@
+*:not(.fa){
+    font-family:'Poppins', sans-serif;
+  }
+  
+  
+  
+  /* TYPO */
+  button{
+    font-size: 2em;
+    font-weight: bold;
+    height: 60px;
+    width: 70%;
+    border-radius: 10px;
+  }
+  .the-fucking-author{
+    font-size: 1.3em;
+    margin: 0px;
+    color: #707070;
+    text-align: center;
+  }
+  .the-fucking-quote{
+    font-size: 2em;
+    margin: 0px;
+    font-weight: 700;
+    text-align: center;
+    color: #707070;
+  }
+  .main-title{
+    padding: 10px 0px 0px 10px;
+    font-size: 5em;
+    margin: 0px;
+    font-weight: 700;
+    color: #707070;
+  }
+  
+  .controller-subtitle{
+    color: #707070;
+    font-size: 1.5em;
+  }
+  
+  .credit-text{
+    text-align: center;
+  }
+  
+  .main-subtitle{
+    margin: -20px 0px 0px 10px;
+    color: #707070;
+  }
+  
+  
+  .controller-title{
+    padding: 10px 0px 0px 10px;
+    font-size: 3em;
+    margin: 0px;
+    font-weight: 700;
+    text-align: center;
+    color: #707070;
+  }
+  
+  .sub-title{
+    padding: 20px 0px 20px 0px;
+    font-size: 3em;
+    margin: 0px;
+    font-weight: 700;
+    text-align: center;
+    color: #707070;
+  }
+  /* CONTAINERS */
+  
+  .controller-action-container{
+    height: 86%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  
+  ::ng-deep .mat-chip-list{
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .img-container{
+    justify-content: space-between;
+    display: flex;
+  }
+  
+  section{
+    height: 100vh;
+    display: flex;
+  }
+  .main-content{
+    display: flex;
+    flex-direction:column;
+    height: 100%;
+    width: 70%;
+  }
+  
+  .sub-content{
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .header{
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    height: 200px;
+  }
+  
+  .controller{
+    width: 30%;
+    display: flex;
+    align-content: space-around;
+    justify-content: space-between;
+    flex-direction: column;
+    border-left: 1px solid lightgray;
+  }
+  
+  .controller-title-container{
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .controller-footer{
+    border-top: 1px solid lightgray;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .credit-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  /* IMAGERY */
+  .image-one{
+    background-color: black;
+    width: 450px;
+    height: 500px;
+  }
+  .image-two{
+    background-color: black;
+    width: 450px;
+    height: 500px;
+  }

@@ -1,2 +1,36 @@
-<h1 *ngIf="quote">{{quote}}</h1>
-<h2 *ngIf="author">{{author}}</h2>
+<section>
+<div class="main-content">
+    <div class="header">
+      <h1 class="main-title">IGarnish</h1>
+      <h3 class="main-subtitle">the ultimate garnish for your instagram pic!</h3>
+    </div>
+    <div class="sub-content">
+      <h2 class="sub-title">STEAKS ARE MUCH BETTER WHEN GARNISHED!</h2>
+      <div class="img-container">
+        <div class="image-one"></div>
+        <div class="image-two"></div>
+      </div>
+    </div>
+  </div>
+  <div class="controller">
+    <div class="controller-title-container">
+      <h2 class="controller-title">find your garnish!</h2>
+    </div>
+    <div class="controller-action-container">
+        <h2 class="controller-subtitle">first, choose your tag!</h2>
+        <mat-chip-list>
+            <mat-chip *ngFor="let tag of tags">{{tag}}</mat-chip>
+        </mat-chip-list>
+        <button mat-raised-button>GENERATE QUOTE</button>
+        <h3 class="the-fucking-quote">{{quote}}</h3>
+        <p  class="the-fucking-author">{{author}}</p>
+    </div>
+    <div class="controller-footer">
+      <h3 class="credit-text">Made during a stupid afternoon by</h3>
+      <div class="credit-container">
+        <p>Davide Curcio</p><i class="fa fa-github"></i><i class="fa fa-linkedin"></i>
+        <p>Andrea Lovati</p><i class="fa fa-github"></i><i class="fa fa-linkedin"></i>
+      </div>
+    </div>
+  </div>
+  </section>

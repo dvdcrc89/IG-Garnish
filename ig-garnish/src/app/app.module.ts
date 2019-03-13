@@ -5,7 +5,8 @@ import { ControllerComponent } from './components/controller/controller.componen
 import { MainComponent } from './components/main/main.component';
 import { QuoteService } from './services/quote.services';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MatChipsModule } from '@angular/material/chips';
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,
+    MatChipsModule,
+    MatButtonModule
 
   ],
   providers: [QuoteService,HttpClientModule],

@@ -12,11 +12,13 @@ export class ControllerComponent implements OnInit {
   author:string;
   quoteText:string;
   quoteAuthor:string;
+  tags = ['Love','Passion','Inspiring','Movie','Fun','Sassy','Sporty',]
   constructor() { }
 
   ngOnInit() {
     console.log(this.quote)
     // this.quoteText = this.quote;
+    
   }
 
 }
