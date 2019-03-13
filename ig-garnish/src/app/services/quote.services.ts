@@ -16,9 +16,9 @@ export class QuoteService {
   getQuote(payload):Observable<any>{
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type','application/json').set('Authorization','Token '+ this.apiKey);
-    let url = "https://api.paperquotes.com/apiv1/quotes/?limit=1&order=?&maxlength=140";
+    let url = "https://api.paperquotes.com/apiv1/quotes/?limit=1&order=?&maxlength=140&lang=en";
     if(payload.tag){
-        url = url+"&lang=en&tags="+payload.tag
+        url = url+"&tags="+payload.tag
     }
     url = url + "&"+Math.random()
     

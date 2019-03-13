@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-controller',
@@ -6,13 +6,16 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./controller.component.css']
 })
 export class ControllerComponent implements OnInit {
+  @Output()
+  pullQuote: EventEmitter<string> = new EventEmitter();
   @Input()
   quote:string;
   @Input()
   author:string;
   quoteText:string;
   quoteAuthor:string;
-  tags = ['Love','Passion','Inspiring','Movie','Fun','Sassy','Sporty',]
+  tags = ['Love','Passion','Inspiring','Movie','Fun','Sassy','Sporty','Any']
+  selectedTag:string = "Any";
   constructor() { }
 
   ngOnInit() {
@@ -20,5 +23,10 @@ export class ControllerComponent implements OnInit {
     // this.quoteText = this.quote;
     
   }
-
+  select(tag){
+   this.selectedTag=tag;
+  }
+  generate(){
+    this.pullQuote.emit(this.selectedTag);
+  }
 }

@@ -1,4 +1,5 @@
 
     <app-controller 
     [quote]="quote|async"
-    [author]="author|async"></app-controller>
+    [author]="author|async"
+    (pullQuote)="pullQuote($event)"></app-controller>

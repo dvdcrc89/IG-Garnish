@@ -19,9 +19,10 @@
     <div class="controller-action-container">
         <h2 class="controller-subtitle">first, choose your tag!</h2>
         <mat-chip-list>
-            <mat-chip *ngFor="let tag of tags">{{tag}}</mat-chip>
+            <mat-chip *ngFor="let tag of tags" (click)="select(tag)">{{tag}}</mat-chip>
         </mat-chip-list>
-        <button mat-raised-button>GENERATE QUOTE</button>
+        {{selectedTag}}
+        <button mat-raised-button (click)="generate()">GENERATE QUOTE</button>
         <h3 class="the-fucking-quote">{{quote}}</h3>
         <p  class="the-fucking-author">{{author}}</p>
     </div>

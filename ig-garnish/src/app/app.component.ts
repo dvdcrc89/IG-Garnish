@@ -16,14 +16,28 @@ export class AppComponent implements OnInit {
   author: Observable<any>
   ngOnInit() {
     let payload={
-      tag:"love"
+      tag:"Any"
     }
-     this.quoteService.getQuote(payload).subscribe(quote=>{
+     this.pullQuote(payload);
+    
+  } 
+
+  pullQuote(tag){
+  
+    let payload={};
+    if(tag && tag !=="Any"){
+      payload = {
+        tag:tag
+      };
+    }
+ 
+    console.log("payload",payload);
+    this.quoteService.getQuote(payload).subscribe(quote=>{
       let q = quote.results[0].quote.replace(quote.results[0].author,"")
       this.quote = of(q)
       this.author = of(quote.results[0].author)
      }
      )
-    
-  } 
+
+  }
 }
