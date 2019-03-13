@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { a } from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-controller',
@@ -14,14 +15,14 @@ export class ControllerComponent implements OnInit {
   author:string;
   quoteText:string;
   quoteAuthor:string;
-  tags = ['Love','Passion','Inspiring','Movie','Fun','Sassy','Sporty','Any']
+  tags = ['Love','Passion','Movie','Fun','Humor','Relationship','Inspirational','Any']
   selectedTag:string = "Any";
   constructor() { }
 
   ngOnInit() {
     console.log(this.quote)
     // this.quoteText = this.quote;
-    
+    this.tags = this.tags.sort((a,b)=>b.length-a.length)
   }
   select(tag){
    this.selectedTag=tag;
