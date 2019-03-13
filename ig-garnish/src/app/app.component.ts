@@ -15,10 +15,6 @@ export class AppComponent implements OnInit {
   quote: Observable<any>
   author: Observable<any>
   ngOnInit() {
-    let payload={
-      tag:"Any"
-    }
-     this.pullQuote(payload);
     
   } 
 

@@ -21,10 +21,14 @@
         <mat-chip-list>
             <mat-chip *ngFor="let tag of tags" (click)="select(tag)">{{tag}}</mat-chip>
         </mat-chip-list>
-        {{selectedTag}}
         <button mat-raised-button (click)="generate()">GENERATE QUOTE</button>
-        <h3 class="the-fucking-quote">{{quote}}</h3>
+        <h3 class="the-fucking-quote" #text>{{quote}}</h3>
         <p  class="the-fucking-author">{{author}}</p>
+        <button mat-raised-button ngxClipboard 
+        class="small"
+        [cbContent]="quote + ' ' +author">
+        COPY TO CLIPBOARD</button>
+
     </div>
     <div class="controller-footer">
       <h3 class="credit-text">Made during a stupid afternoon by</h3>

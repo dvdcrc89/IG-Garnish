@@ -29,4 +29,9 @@ export class ControllerComponent implements OnInit {
   generate(){
     this.pullQuote.emit(this.selectedTag);
   }
+  copy(inputElement){
+      inputElement.select();
+      document.execCommand('copy');
+      inputElement.setSelectionRange(0, 0);
+  }
 }

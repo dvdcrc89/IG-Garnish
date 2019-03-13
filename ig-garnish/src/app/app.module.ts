@@ -7,6 +7,8 @@ import { QuoteService } from './services/quote.services';
 import { HttpClientModule } from '@angular/common/http';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
+import { ClipboardModule } from 'ngx-clipboard';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserModule,
     HttpClientModule,
     MatChipsModule,
-    MatButtonModule
+    MatButtonModule,
+    ClipboardModule
 
   ],
   providers: [QuoteService,HttpClientModule],
