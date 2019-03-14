@@ -2,9 +2,17 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 
-body{
+html, body {
   margin: 0px;
-  overflow-x: hidden;
-  overflow-y: hidden;
-
+  width:100%; /* take full browser width */
+}
+@media all and (max-width: 570px) {
+  html{
+    height: 100vh;
+  }
+}
+@media all and (min-width:540px) and (max-width: 900px) {
+  html{
+    height: 150vh!important;
+  }
 }

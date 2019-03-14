@@ -18,6 +18,8 @@
     font-size: 0.8em;
     color: black;
     margin: 0px;
+    padding: 5px;
+    border-bottom: 1px solid grey;
   }
   .small{
     font-size: 1em;
@@ -83,11 +85,13 @@
   .sub-title{
     bottom: 10px;
     padding: 15px 0px 15px 0px;
-    font-size: 1.65em;
+    font-size: 3em;
     margin: 0px;
     font-weight: 700;
     text-align: center;
-    color: #707070;
+    color: #4d4d4d;
+    text-decoration: underline;
+    font-family: 'Fugaz One', cursive;
   }
   /* CONTAINERS */
   
@@ -98,13 +102,18 @@
     justify-content: space-evenly;
     flex-direction: column;
   }
+
+  ::ng-deep .mat-chip{
+    cursor: pointer;
+  }
   
   ::ng-deep .mat-chip-list{
     justify-content: center;
     width: 70%;
     margin: 0 auto;
-    padding-top: 90px;
+    padding-top: 20px;
     padding-bottom: 11px;
+    border-top: 1px solid grey;
   }
 
   ::ng-deep .mat-chip-list-wrapper{
@@ -123,8 +132,11 @@
   }
   .main-content{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction:column;
     height: 100%;
+    /* background-image: url('../../../assets/memphis-colorful.png'); */
     width: 70%;
   }
   
@@ -151,24 +163,33 @@
     justify-content: space-between;
     flex-direction: column;
     background-color: white;
+    /* background-image: url('../../../assets/memphis-colorful.png'); */
+
 
   }
   
 
   
   .controller-footer{
-    height: 100px;
+    height: 50px;
+    width: 100%;
     padding: 7.5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+
   }
+  .controller-content-aligner{
+    display: flex;
+    width: 100%;
+  }
+
   
   .credit-container{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    width: 170px;
   }
   .quote-box{
       height: 150px;
@@ -201,3 +222,58 @@
     width: 337.5px;
     height: 375px;
   }
+
+  .social{
+    width: 20px;
+  }
+
+
+@media all and (max-width: 1690px){ }
+@media all and (max-width: 1280px){
+
+ }
+@media all and (max-width: 980px) {
+  section{
+    width: 100vw;
+  }
+  .main-content{
+    display: none
+  }
+  .controller{
+    width: 100%;
+    padding: 0px;
+  }
+  .main-title{
+    padding: 0px;
+  }
+ }
+@media all and (max-width: 900px) { 
+  section{
+    height: 100%;
+  }
+}
+@media all and (max-width: 570px) { 
+  section{
+    height: 100vh;
+  }
+  .controller{
+    display: block;
+  }
+ 
+}
+
+@media all and (max-width: 320px) { 
+
+  section{
+    height: 120vh;
+  }
+ 
+  .controller-footer{
+    flex-direction: row;
+  }
+  .hide{
+    display: none;
+  }
+
+}
+ 
