@@ -1,7 +1,6 @@
 <section>
 <div class="main-content">
     <div class="header">
- 
     </div>
       <h2 class="sub-title">STEAKS ARE MUCH BETTER GARNISHED!</h2>
     <div class="sub-content">
@@ -17,10 +16,13 @@
   </div>
   <div class="controller">
     <!-- <h2 class="controller-title">find your garnish!</h2> -->
-    <h1 class="main-title">IGarnish</h1>
-    <h3 class="main-subtitle">the ultimate garnish for your instagram pic!</h3>
     <div class="controller-action-container">
-        <!-- <h2 class="controller-subtitle">first, choose your tag!</h2> -->
+      <div class="controller-title-container">
+        <h1 class="main-title">IGarnish</h1>
+        <h3 class="main-subtitle">the ultimate garnish for your instagram pic!</h3>
+    </div>
+    
+    <!-- <h2 class="controller-subtitle">first, choose your tag!</h2> -->
         <mat-chip-list>
             <mat-chip 
             *ngFor="let tag of tags" 
@@ -36,19 +38,19 @@
         class="small"
         [cbContent]="quote + ' ' +author">
         COPY TO CLIPBOARD</button>
-
     </div>
     <h3 class="credit-text"> << Made during a stupid afternoon by >></h3>
+
     <div class="controller-footer">
       <div class="credit-container">
             <p class="credit-text">Davide Curcio</p>
-            <a href="https://github.com/dvdcrc89"><img class="social" src="../../../assets/iconmonstr-github-1.svg" alt=""></a>
-            <a href="https://www.linkedin.com/in/davidecurcio/"><img  class="social" src="../../../assets/iconmonstr-linkedin-3.svg" alt=""></a>
+            <a href="https://github.com/dvdcrc89"><img class="social hide" src="../../../assets/iconmonstr-github-1.svg" alt=""></a>
+            <a href="https://www.linkedin.com/in/davidecurcio/"><img  class="social hide" src="../../../assets/iconmonstr-linkedin-3.svg" alt=""></a>
         </div>
         <div class="credit-container">
             <p class="credit-text">Andrea Lovati</p>
-            <a href="https://github.com/lova233"><img class="social" src="../../../assets/iconmonstr-github-1.svg" alt=""></a>
-            <a href="https://www.linkedin.com/in/andrea-lovati-252a38141/"><img class="social"src="../../../assets/iconmonstr-linkedin-3.svg" alt=""></a>
+            <a href="https://github.com/lova233"><img class="social hide" src="../../../assets/iconmonstr-github-1.svg" alt=""></a>
+            <a href="https://www.linkedin.com/in/andrea-lovati-252a38141/"><img class="social hide"src="../../../assets/iconmonstr-linkedin-3.svg" alt=""></a>
         </div>
     </div>
   </div>
