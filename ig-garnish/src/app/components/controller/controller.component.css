@@ -180,6 +180,9 @@
       padding:15px;
 
     }
+    .active-tag{
+      background: pink;
+    }
   /* IMAGERY */
 
   .insta-img{

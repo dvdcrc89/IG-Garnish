@@ -21,7 +21,10 @@
     <div class="controller-action-container">
         <!-- <h2 class="controller-subtitle">first, choose your tag!</h2> -->
         <mat-chip-list>
-            <mat-chip *ngFor="let tag of tags" (click)="select(tag)">{{tag}}</mat-chip>
+            <mat-chip 
+            *ngFor="let tag of tags" 
+            (click)="select(tag)"
+            [ngClass]="tag===selectedTag ? 'active-tag':''">{{tag}}</mat-chip>
         </mat-chip-list>
         <button mat-raised-button (click)="generate()">GENERATE</button>
         <div class="quote-box">
