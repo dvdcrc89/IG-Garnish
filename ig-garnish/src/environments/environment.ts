@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiKey:"ca092722a4a9720ee9b67832d14eab95cff71a28"
+  url:"https://k8e1sunrv0.execute-api.eu-west-2.amazonaws.com/igarnish"
 };
 
 /*

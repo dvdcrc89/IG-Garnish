@@ -10,20 +10,19 @@ import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class QuoteService {
-    apiKey:string = environment.apiKey
+
   constructor(private http: HttpClient) {}
 
   getQuote(payload):Observable<any>{
-    let headers = new HttpHeaders();
-    headers = headers.set('Content-Type','application/json').set('Authorization','Token '+ this.apiKey);
-    let url = "https://api.paperquotes.com/apiv1/quotes/?limit=1&order=?&maxlength=140&lang=en";
+    let url = environment.url;
     if(payload.tag){
-        url = url+"&tags="+payload.tag
+        url = url+"/"+payload.tag
+    } else {
+      url = url+"/Any"
     }
-    url = url + "&"+Math.random()
-    
+    console.log(url);
     return this.http
-    .get<any[]>(url,{headers:headers})
+    .get<Quote>(url)
     .pipe(catchError((error: any) => of(null)));
   }
 }

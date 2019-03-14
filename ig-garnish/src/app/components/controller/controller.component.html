@@ -28,8 +28,8 @@
         </mat-chip-list>
         <button mat-raised-button (click)="generate()">GENERATE</button>
         <div class="quote-box">
-            <h3 class="the-fucking-quote" #text>{{quote}}</h3>
-            <p  class="the-fucking-author">{{author}}</p>
+            <h3 class="the-fucking-quote" *ngIf="quote">{{quote}}</h3>
+            <p  class="the-fucking-author" *ngIf="author">{{author}}</p>
         </div>
         <button mat-raised-button ngxClipboard 
         class="small"
