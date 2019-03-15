@@ -27,7 +27,6 @@ export class AppComponent implements OnInit {
       };
     }
  
-    console.log("payload",payload);
     this.quoteService.getQuote(payload).subscribe(quote=>{
       let q = quote.quote.replace(quote.author,"")
       this.quote = of(q)

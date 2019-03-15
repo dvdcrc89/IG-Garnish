@@ -19,8 +19,6 @@ export class ControllerComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.quote)
-    // this.quoteText = this.quote;
     this.tags = this.tags.sort((a,b)=>b.length-a.length)
   }
   select(tag){

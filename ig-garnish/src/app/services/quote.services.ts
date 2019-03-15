@@ -20,7 +20,6 @@ export class QuoteService {
     } else {
       url = url+"/Any"
     }
-    console.log(url);
     return this.http
     .get<Quote>(url)
     .pipe(catchError((error: any) => of(null)));
