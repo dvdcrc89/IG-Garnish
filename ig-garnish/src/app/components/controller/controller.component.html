@@ -30,11 +30,11 @@
             [ngClass]="tag===selectedTag ? 'active-tag':''">{{tag}}</mat-chip>
         </mat-chip-list>
       <div class="buttons-container">
-        <button mat-raised-button (click)="generate()">GENERATE!</button>
+        <button mat-raised-button (click)="generate()">GENERATE</button>
         <button mat-raised-button ngxClipboard 
         class="small"
         [cbContent]="quote + ' ' +author">
-        COPY!</button>
+        COPY</button>
       </div>
         <div class="quote-box">
             <h3 class="the-fucking-quote" *ngIf="quote">{{quote}}</h3>
