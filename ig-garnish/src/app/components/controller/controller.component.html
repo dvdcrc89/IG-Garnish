@@ -1,8 +1,8 @@
 <section>
 <div class="main-content">
     <div class="header">
+        <h2 class="sub-title">STEAKS ARE MUCH BETTER GARNISHED!</h2>
     </div>
-      <h2 class="sub-title">STEAKS ARE MUCH BETTER GARNISHED!</h2>
     <div class="sub-content">
       <div class="img-container">
          <div class="image-one">
@@ -18,9 +18,9 @@
     <!-- <h2 class="controller-title">find your garnish!</h2> -->
     <div class="controller-action-container">
       <div class="controller-title-container">
-        <h1 class="main-title">IGarnish</h1>
-        <h3 class="main-subtitle">the ultimate garnish for your instagram pic!</h3>
-    </div>
+        <img class="logo-img" src="../../../assets/LogoImage.svg">
+        <img class="logo-text" src="../../../assets/Logo.svg">
+      </div>
     
     <!-- <h2 class="controller-subtitle">first, choose your tag!</h2> -->
         <mat-chip-list>
@@ -29,28 +29,35 @@
             (click)="select(tag)"
             [ngClass]="tag===selectedTag ? 'active-tag':''">{{tag}}</mat-chip>
         </mat-chip-list>
-        <button mat-raised-button (click)="generate()">GENERATE</button>
+      <div class="buttons-container">
+        <button mat-raised-button (click)="generate()">GENERATE!</button>
+        <button mat-raised-button ngxClipboard 
+        class="small"
+        [cbContent]="quote + ' ' +author">
+        COPY!</button>
+      </div>
         <div class="quote-box">
             <h3 class="the-fucking-quote" *ngIf="quote">{{quote}}</h3>
             <p  class="the-fucking-author" *ngIf="author">{{author}}</p>
         </div>
-        <button mat-raised-button ngxClipboard 
-        class="small"
-        [cbContent]="quote + ' ' +author">
-        COPY TO CLIPBOARD</button>
+      
     </div>
     <h3 class="credit-text"> << Made during a stupid afternoon by >></h3>
 
     <div class="controller-footer">
       <div class="credit-container">
             <p class="credit-text">Davide Curcio</p>
-            <a href="https://github.com/dvdcrc89"><img class="social hide" src="../../../assets/iconmonstr-github-1.svg" alt=""></a>
-            <a href="https://www.linkedin.com/in/davidecurcio/"><img  class="social hide" src="../../../assets/iconmonstr-linkedin-3.svg" alt=""></a>
+            <a target="_blank" href="https://github.com/dvdcrc89"><img class="social hide" src="../../../assets/iconmonstr-github-1.svg" alt=""></a>
+            <a target="_blank" href="https://www.linkedin.com/in/davidecurcio/"><img  class="social hide" src="../../../assets/iconmonstr-linkedin-3.svg" alt=""></a>
         </div>
         <div class="credit-container">
             <p class="credit-text">Andrea Lovati</p>
-            <a href="https://github.com/lova233"><img class="social hide" src="../../../assets/iconmonstr-github-1.svg" alt=""></a>
-            <a href="https://www.linkedin.com/in/andrea-lovati-252a38141/"><img class="social hide"src="../../../assets/iconmonstr-linkedin-3.svg" alt=""></a>
+            <a target="_blank" href="https://github.com/lova233"><img class="social hide" src="../../../assets/iconmonstr-github-1.svg" alt=""></a>
+            <a target="_blank" href="https://www.linkedin.com/in/andrea-lovati-252a38141/"><img class="social hide"src="../../../assets/iconmonstr-linkedin-3.svg" alt=""></a>
+        </div>
+        <div class="credit-container">
+            <p class="credit-text">Francesco Pioda</p>
+            <a target="_blank" href="https://www.instagram.com/francescopioda/"><img class="social hide" src="../../../assets/iconmonstr-instagram-11.svg" alt=""></a>
         </div>
     </div>
   </div>

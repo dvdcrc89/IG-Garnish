@@ -19,13 +19,17 @@
     color: black;
     margin: 0px;
     padding: 5px;
-    border-bottom: 1px solid grey;
+  }
+  .buttons-container{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
   }
   .small{
     font-size: 1em;
     font-weight: bold;
     height: 50px;
-    width: 210px;
+    /* width: 210px; */
     border-radius: 10px;
     background-color: pink;
   }
@@ -39,7 +43,7 @@
   .the-fucking-quote{
     font-size: 1.2em;
     margin: 0px;
-    padding-bottom: 10px;
+    padding: 10px;
     font-weight: normal;
     font-style: normal;
     text-align: center;
@@ -94,6 +98,13 @@
     font-family: 'Fugaz One', cursive;
   }
   /* CONTAINERS */
+
+  .controller-title-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
   
   .controller-action-container{
     height: 86%;
@@ -101,6 +112,7 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
+    margin-bottom: 20px;
   }
 
   ::ng-deep .mat-chip{
@@ -113,7 +125,6 @@
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 11px;
-    border-top: 1px solid grey;
   }
 
   ::ng-deep .mat-chip-list-wrapper{
@@ -171,12 +182,12 @@
 
   
   .controller-footer{
-    height: 50px;
-    width: 100%;
+    height: 65px;
     padding: 7.5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 
   }
   .controller-content-aligner{
@@ -205,6 +216,13 @@
       background: pink;
     }
   /* IMAGERY */
+
+  .logo-text{
+    width: 100%;
+  }
+  .logo-img{
+    width: 100px;
+  }
 
   .insta-img{
     width: 100%;
